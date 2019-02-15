@@ -8,7 +8,36 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container-fluid{
+  position: fixed;
+  height: 100%;
+}
+
+.container-row{
+  height: 100%;
+  width: 100%;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.list-section{
+  margin-right: 0px;
+}
+
+.message-section{
+  background-color: beige;
+}
+
+.message-input{
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+.listpanel{
+  height: 100%;
 }

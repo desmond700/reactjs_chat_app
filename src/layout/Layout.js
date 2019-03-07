@@ -1,21 +1,25 @@
 import React, { Component } from 'react';
 import { Col, Row } from 'react-bootstrap';
+import { Login } from '../components/Login'
 
 export class Layout extends Component {
   displayName = Layout.name
 
   render() {
+
     return (
-      <div className="container-fluid bg-secondary">
-        <h3>title</h3>
-        <Row className="container-row">
-          <Col xs={6} md={3} className="bg-dark list-section">
+      <div className="container">
+          <Col md={12} className="header">
+              
+            </Col>
+          <Row>
+            <Col xs={12} md={3} className="list-panel">
               {this.props.listPanel}
-          </Col>
-          <Col xs={12} md={9} className="message-section">
+            </Col>
+            <Col xs={12} md={9} className="message-panel">
               {this.props.messagePanel}
-          </Col>
-        </Row>
+            </Col>
+          </Row>
       </div>
     );
   }

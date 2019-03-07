@@ -6,38 +6,109 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #6c757d;
 }
 
-.container-fluid{
-  position: fixed;
-  height: 100%;
+.header{
+  display: flex;
+  justify-content: flex-end;
+  height: auto;
+  padding: 10px 0;
 }
 
-.container-row{
-  height: 100%;
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)}
+  to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+  from {transform: scale(0)}
+  to {transform: scale(1)}
+} 
+
+ /* Bordered form */
+ form {
+  border: 3px solid #f1f1f1;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.actionbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
   width: 100%;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Add a hover effect for buttons */
+.actionbtn:hover {
+  opacity: 0.8;
 }
 
-.list-section{
-  margin-right: 0px;
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
 }
 
-.message-section{
-  background-color: beige;
+/* Center the avatar image inside this container */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
 }
 
-.message-input{
-  position: absolute;
-  bottom: 0;
-  padding: 10px;
-  width: 100%;
+/* Avatar image */
+img.avatar {
+  width: 40%;
+  border-radius: 50%;
 }
 
-.listpanel{
-  height: 100%;
+/* Add padding to containers */
+.container {
+  padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+    display: block;
+    float: none;
+  }
+  .cancelbtn {
+    width: 100%;
+  }
+} 
+
+@media only screen and (min-width: 990px) {
+
+  .container-row{
+    width: 990px;
+    margin: auto;
+  }
 }

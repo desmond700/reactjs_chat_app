@@ -5,18 +5,25 @@ export class MessagePanel extends Component {
 
   render() {
     return (
-      <div>
-        <div className="mx-4 my-4">
-            <h2>Message Panel</h2>
-        </div>
-        <div className="message-input">
-        <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2"/>
-            <div class="input-group-append">
-              <button class="btn btn-outline-secondary" type="button" id="button-addon2">Button</button>
-            </div>
+      <div className="col-12">
+          <div className="chat-sect h-100">
+              <div className="d-flex pb-1">
+                  <img id="backBtn" className="my-auto mr-2 border" src="~/img/baseline_arrow_back_white_18dp.png" alt="user" />
+                  <h3 className="text-dark py-3 m-0">Your conversation with <span id="convo_partner_name" className="text-dark">convo_partner_name</span></h3>
+              </div>   
+              <span id="isTyping" className="text-center pb-1"></span>
+              <div className="message-box">
+                  <div className="message-status">message sent</div>
+              </div>
+              <input type="hidden" id="userInput" value="@Model.Username" />
+              <div className="message-input d-flex">
+                  <input type="text" id="messageInput" className="form-control" placeholder="Write a message" />
+                  <button id="sendButton" className="btn">Send</button>
+              </div>
           </div>
-        </div>
+          <div className="no-chat h-100">
+              <h3 className="text-center align-self-center flex-grow-1">Select an online user to begin chat</h3>
+          </div>
       </div>
     );
   }

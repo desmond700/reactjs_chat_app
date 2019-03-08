@@ -34,7 +34,7 @@ export class Util{
         });
         return await new Promise((resolve, reject) => {
 
-             fetch(this.Url+"/user",{method: "POST", body: formData}).then(response => {
+             fetch(this.Url+"/register",{method: "POST", body: formData}).then(response => {
                 response.json().then(json => {
                     resolve(json);
                     console.log(json);

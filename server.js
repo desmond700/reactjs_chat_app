@@ -73,7 +73,7 @@ app.get('/login/:username/:password', (req, res) => {
   
 });
 
-app.post('/user', upload.single('imageFile'), (req, res) => {
+app.post('/register', upload.single('imageFile'), (req, res) => {
     let user = req.body;
     console.log("user: "+JSON.stringify(user));
     let userData = new UserModel(user);

@@ -1,41 +1,13 @@
 
 import React, { Component } from 'react';
 import { Nav } from 'react-bootstrap';
-import socketIOClient from 'socket.io-client'
 
 export class ListPanel extends Component {
   displayName = ListPanel.name
-  
-  constructor(props){
-      super(props);
-      
-      this.state = {
-        endpoint: "http://localhost:4001", // this is where we are connecting to with sockets
-        userData: null
-      } 
-  }
-
-  // method for emitting a socket.io event
-  send = () => {
-    const socket = socketIOClient(this.state.endpoint)
-    
-    // this emits an event to the socket (your server) with an argument of 'red'
-    // you can make the argument any color you would like, or any kind of data you want to send.
-    
-    socket.emit('UserConnected', 'Desmond') 
-
-    socket.on("status", (message) => {
-        document.getElementsByClassName('statusTxt').innerHTML = message;
-    })
-  }
 
   render() {
-    /*this.send();
-    this.socket.on('userData', (data) => {
-      this.setState({userData: data});
-    });*/
     return (
-      <div className="px-2 bg-dark h-100">
+      <div className="px-2 py-2 bg-dark h-100">
           <div>
             <div className="d-flex">
               <div className="d-flex">
